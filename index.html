@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color switcher</title>
+    <style>
+        @keyframes example{
+               /* from {background-color: red;}
+               to {background-color: yellow;} */
+               /* 0%   {background-color: red;}
+               25%  {background-color: yellow;}
+               50%  {background-color: blue;}
+               100% {background-color: green;}*/
+           
+           0%   {color:red; left:0px; top:0px;}
+           25%  {color:yellow; left:200px; top:0px;}
+           50%  {color:blue; left:200px; top:200px;}
+           75%  {color:green; left:0px; top:200px;}
+           100% {color:rgb(89, 56, 133); left:0px; top:0px;}
+           }
+           @keyframes xample{
+               /* from {background-color: red;}
+               to {background-color: yellow;} */
+               /* 0%   {background-color: red;}
+               25%  {background-color: yellow;}
+               50%  {background-color: blue;}
+               100% {background-color: green;}*/
+           
+           0%   {background-color:red; left:0px; top:0px;}
+           25%  {background-color:yellow; left:200px; top:0px;}
+           50%  {background-color:blue; left:200px; top:200px;}
+           75%  {background-color:green; left:0px; top:200px;}
+           78%  {background-color:orangered; left:0px; top:200px;}
+           85%  {background-color:purple; left:0px; top:200px;}
+           100% {background-color:rgb(89, 56, 133); left:0px; top:0px;}
+           }
+            section{
+                transition: 2s, linear 1s ;
+              
+           }
+           body{
+               transition: 2s, linear 1s ;
+               width: 99%;
+           }
+           span{
+               animation-name: example;
+               animation-duration: 10s;
+               animation-iteration-count: infinite; 
+           }
+           .an{
+               animation-name: xample;
+               animation-duration: 10s;
+               animation-iteration-count: infinite; 
+           }
+           button{
+            cursor: pointer;
+           }
+           
+   </style>
+</head>
+
+<script>
+    function changeC()
+{
+var color = document.getElementById('color').value;
+// var color = document.getElementById('clor').value;
+var section = document.getElementsByTagName('section')[0];
+var body = document.getElementsByTagName('body')[0];
+var div = document.getElementsByTagName('div')[0];
+    
+section.style.backgroundColor=color; 
+body.style.backgroundColor=color; 
+div.style.backgroundColor='white'; 
+
+
+    
+}; 
+function changeeC()
+{
+// var color = document.getElementById('color').value;
+var color = document.getElementById('clor').value;
+var section = document.getElementsByTagName('section')[0];
+var body = document.getElementsByTagName('body')[0];
+var div = document.getElementsByTagName('div')[0];
+    
+section.style.backgroundColor=color; 
+body.style.backgroundColor=color; 
+div.style.backgroundColor='white'; 
+
+document.getElementById("clor").value = "";
+    
+};
+
+
+</script>
+<body >
+    <h1 style="font-size: 3rem; 
+        font-family: system-ui, -apple-system,
+        BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',sans-serif;
+        background-color: white;
+        width: 26%;
+        text-align: center;" 
+        id="cf"><span> Color Switcher</span></h1>
+ <div class="an" style="border: 2px solid black;
+             height: 400px;
+             width: 900px; 
+             translate: 30%;
+             border-radius: 3rem;">
+    <section style="border: 1px solid black;
+                     height: 200px;
+                     width: 400px; 
+                     translate: 60%; 
+                     margin-top: 9%;
+                     box-shadow: 0 0 10px 1px black;
+                     background-color: white;" >
+        <h2 style="text-align: center;  font-size: 2rem;">Select Your <span>Color</span></h2>
+        <div style="margin-top: 15%; margin-left: 35%;">
+            <input type="text" placeholder="#jona" id="clor"><button style="border-radius: 0.2rem; padding: 1.2%; border: none; " onclick="changeeC()">Change</button>  <br><br>
+            <input type="color"  id="color" style="width: 20%; ">
+            <button style="border-radius: 0.2rem; padding: 1.2%; border: none; " onclick="changeC()">Change</button>  
+        </div>
+    </section>
+ </div>
+ <div style="font-size: 2rem; margin-top: 3%;">You get to pick any color of your choice ...</div>
+   
+    
+
+    
+
+
+</body>
+</html>
