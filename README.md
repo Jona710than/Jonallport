@@ -1,2 +1,2 @@
 # Jonallport
-This is my first ever portfolio
+This is at text on media query
